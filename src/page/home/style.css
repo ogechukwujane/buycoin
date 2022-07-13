@@ -1,0 +1,145 @@
+.container {
+  width: 100%;
+  max-height: 100vh;
+  min-height: 100vh;
+  overflow: hidden;
+}
+.header {
+  background: rgb(3, 5, 27);
+  width: 100%;
+  max-height: 28vh;
+  min-height: 28vh;
+  position: relative;
+}
+.logo {
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px;
+}
+.search-wrapper {
+  margin: 50px 15%;
+}
+.search {
+  width: calc(100% - 20px);
+  height: 6vh;
+  border-radius: 25px;
+  font-size: 16px;
+  padding-left: 15px;
+}
+.flex {
+  width: 70%;
+  height: 10vh;
+  position: absolute;
+  bottom: -5vh;
+  display: flex;
+  right: 15%;
+}
+.filter-container{
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  column-gap: 10px;
+  margin: auto 0px;
+}
+.filter-box {
+  width: 20vw;
+  height: 10vh;
+  background: white;
+  background: rgb(246, 246, 253);
+  border-radius: 15px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+.filter-container :hover {
+  transform: scale(1.03);
+  cursor: pointer;
+}
+.label {
+  font-weight: 700;
+  font-size: 18px;
+  color: gray;
+}
+.label :hover {
+  transform: scale(0px);
+}
+.table-container {
+  width: 90%;
+  margin: auto;
+  margin-top: 96px;
+  max-height: calc(100vh - 49vh);
+  min-height: calc(100vh - 49vh);
+  overflow-y: scroll;
+}
+.date-heading {
+  font-weight: 700;
+  font-size: 16px;
+  margin-top: 20px;
+}
+table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+  padding: 0px;
+}
+tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+th {
+  padding: 10px;
+  font-size: 16px;
+  background: rgba(0, 0, 0, 0.25);
+}
+td {
+  padding: 10px;
+  font-weight: 500;
+  font-size: 16px;
+}
+@media (max-width: 768px) {
+  label {
+    font-size: 14px;
+  }
+  td,
+  th,
+  .date-heading {
+    font-size: 14px;
+  }
+  .flex {
+    overflow-y: hidden;
+    overflow-x: scroll;
+  }
+  .filter-container{
+    width: unset;
+    display: flex;
+    column-gap: 10px;
+    margin: auto 0px;
+  }
+  .filter-box {
+    width: 20vw;
+  }
+}
+@media (max-width: 425px) {
+  .search-wrapper {
+    margin: 30px 5%;
+  }
+  .flex {
+    width: 90%;
+    right: 5%;
+  }
+  .filter-box {
+    width: 30vw;
+  }
+  label {
+    margin: 8px 10px 0px 10px;
+    margin: 8px 8px 0px 8px;
+  }
+  .table-container {
+    overflow-x: scroll;
+  }
+  .table-section {
+    width: 180vw;
+  }
+}

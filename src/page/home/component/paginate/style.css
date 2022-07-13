@@ -1,0 +1,32 @@
+.pagination {
+  display: flex;
+  column-gap: 10px;
+  justify-content: flex-end;
+  align-items: center;
+  width: 90%;
+  margin:  8px auto;
+}
+.backArrowWrap {
+    display: flex;
+  width: 10px;
+  height: 25px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+.pageButton {
+  height: 15px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #ffffff;
+  text-align: center;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  background: rgb(3, 5, 27);
+}
+.rightArrowWrap {
+    display: flex;
+  width: 10px;
+  height: 25px;
+  cursor: pointer;
+}

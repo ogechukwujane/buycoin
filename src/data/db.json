@@ -1,0 +1,145 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "name": "Uchechi Ndubueze",
+        "role": "Buyer",
+        "currency": "Bitcoin",
+        "date": "10th January, 2021"
+      },
+      {
+        "id": 2,
+        "name": "Joy Nduka",
+        "role": "Seller",
+        "currency": "Ethereum",
+        "date": "10th January, 2021"
+      },
+      {
+        "id": 3,
+        "name": "Vivian Dozie",
+        "role": "Buyer",
+        "currency": "Bitcoin",
+        "date": "20th December, 2021"
+      },
+      {
+        "id": 4,
+        "name": "Victor Emmanuel",
+        "role": "Buyer",
+        "currency": "BNB",
+        "date": "10th January, 2021"
+      },
+      {
+        "id": 5,
+        "name": "Uchechukwu Okeke",
+        "role": "Buyer",
+        "currency": "Ethereum",
+        "date": "20th December, 2021"
+      },
+      {
+        "id": 6,
+        "name": "Joy Philip",
+        "role": "Buyer",
+        "currency": "BNB",
+        "date": "03rd January, 2022"
+      },
+      {
+        "id": 7,
+        "name": "Nkanu Boju",
+        "role": "Buyer",
+        "currency": "Bitcoin",
+        "date": "03rd January, 2022"
+      },
+      {
+        "id": 8,
+        "name": "Emeka Theophilus",
+        "role": "Seller",
+        "currency": "BNB",
+        "date": "10th March, 2022"
+      },
+      {
+        "id": 9,
+        "name": "Ann Emeka",
+        "role": "Seller",
+        "currency": "BNB",
+        "date": "03rd January, 2022"
+      },
+      {
+        "id": 10,
+        "name": "Ogechi Ogbonna",
+        "role": "Buyer",
+        "currency": "Ethereum",
+        "date": "01st April, 2022"
+      },
+      {
+        "id": 11,
+        "name": "Ugochi Okafor",
+        "role": "Seller",
+        "currency": "BNB",
+        "date": "01st April, 2022"
+      },
+      {
+        "id": 12,
+        "name": "Doris Innocent",
+        "role": "Buyer",
+        "currency": "Bitcoin",
+        "date": "10th March, 2022"
+      },
+      {
+        "id": 13,
+        "name": "Blessing Peter",
+        "role": "Buyer",
+        "currency": "Ethereum",
+        "date": "10th January, 2021"
+      },
+      {
+        "id": 14,
+        "name": "Praise Ndubueze",
+        "role": "Seller",
+        "currency": "Bitcoin",
+        "date": "20th December, 2021"
+      },
+      {
+        "id": 15,
+        "name": "Uchechi Ndubueze",
+        "role": "Seller",
+        "currency": "Ethereum",
+        "date": "01st April, 2022"
+      },
+      {
+        "id": 16,
+        "name": "Bolaje Yemisi",
+        "role": "Buyer",
+        "currency": "BNB",
+        "date": "10th March, 2022"
+      },
+      {
+        "id": 17,
+        "name": "Okafor Franca",
+        "role": "Seller",
+        "currency": "Bitcoin",
+        "date": "01st April, 2022"
+      },
+      {
+        "id": 18,
+        "name": "Favour Ayola",
+        "role": "Buyer",
+        "currency": "Bitcoin",
+        "date": "10th March, 2022"
+      },
+      {
+        "id": 19,
+        "name": "Stanley Adebayo",
+        "role": "Buyer",
+        "currency": "Ethereum",
+        "date": "10th March, 2022"
+      },
+      {
+        "id": 20,
+        "name": "Faith Adesua",
+        "role": "Buyer",
+        "currency": "Ethereum",
+        "date": "03rd January, 2022"
+      }
+    ]
+  }
+  
