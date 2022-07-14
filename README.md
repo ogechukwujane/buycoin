@@ -13,8 +13,8 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 
 ### `requirements`
-For this project development, React and json data was used which can be found in the data folder as db.json.
-An array of twenty objects was created with five different dates.
+For this project development, React and json data were used which can be found in the data folder as db.json file.
+An array of twenty objects were created with five different dates.
 
 **Note: All folders and files used were created inside the src folder!**
 
