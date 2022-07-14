@@ -1,7 +1,42 @@
+import {
+  Container,
+  ContentContainer,
+  Flex,
+  GirlImage,
+  HeaderContainer,
+  Heading,
+  ImageContainer,
+  LeftWrapper,
+  RightWrapper,
+  Search,
+  SearchContainer,
+  SearchWrapper,
+  Span,
+  Paragraph,
+  FilterContainer,
+  FilterBox,
+  Label,
+  TableContainer,
+  TableSection,
+  Table,
+  TableRow,
+  TableHead,
+  TableData,
+  TableBody,
+  PaginationContainer,
+  ContentWrapper,
+  FilterFlex,
+} from "./style";
 import { useState } from "react";
-import "./style.css";
 import usersDb from "../../data/db.json";
-import { Paginate } from "./component/paginate";
+import girlImage from "../../assets/girl.webp";
+import { ReactComponent as SearchIcon } from "../../assets/search_icon.svg";
+import { ReactComponent as BitcoinIcon } from "../../assets/bitcoin.svg";
+import { ReactComponent as EthereumIcon } from "../../assets/ethereum.svg";
+import { ReactComponent as SolanaIcon } from "../../assets/solana.svg";
+import { Paginate } from "../../components/paginate";
+import { Navbar } from "../../components/header";
+import { Footer } from "../../components/footer";
 
 export const Home = () => {
   const [users, setUsers] = useState(usersDb.users);
@@ -17,8 +52,7 @@ export const Home = () => {
         return (
           user.name.toLowerCase().indexOf(searchUsers.toLowerCase()) !== -1 ||
           user.role.toLowerCase().indexOf(searchUsers.toLowerCase()) !== -1 ||
-          user.currency.toLowerCase().indexOf(searchUsers.toLowerCase()) !==
-            -1 ||
+          user.coin.toLowerCase().indexOf(searchUsers.toLowerCase()) !== -1 ||
           user.date.toLowerCase().indexOf(searchUsers.toLowerCase()) !== -1
         );
       });
@@ -43,21 +77,21 @@ export const Home = () => {
   };
   const handleFilterBitcoin = () => {
     var filterBitcoin = usersDb.users.filter((user) => {
-      return user.currency.indexOf("Bitcoin") !== -1;
+      return user.coin.indexOf("Bitcoin") !== -1;
     });
     setUsers(filterBitcoin);
   };
   const handleFilterEthereum = () => {
     var filterEthereum = usersDb.users.filter((user) => {
-      return user.currency.indexOf("Ethereum") !== -1;
+      return user.coin.indexOf("Ethereum") !== -1;
     });
     setUsers(filterEthereum);
   };
-  const handleFilterBNB = () => {
-    var filterBnb = usersDb.users.filter((user) => {
-      return user.currency.indexOf("BNB") !== -1;
+  const handleFilterSolana = () => {
+    var filterSolana = usersDb.users.filter((user) => {
+      return user.coin.indexOf("Solana") !== -1;
     });
-    setUsers(filterBnb);
+    setUsers(filterSolana);
   };
   const groupBy = (data, key) => {
     return data.reduce((acc, item) => {
@@ -73,84 +107,118 @@ export const Home = () => {
   );
 
   return (
-    <div className="container">
-      <div className="header">
-        <p className="logo">BUYCOINS</p>
-        <div className="search-wrapper">
-          <input
-            className="search"
-            placeholder="Search..."
-            type="text"
-            value={searchUsers}
-            onChange={handleSearch}
+    <Container>
+      <Navbar />
+      <ContentWrapper>
+        <HeaderContainer>
+          <LeftWrapper>
+            <ContentContainer>
+              <Paragraph>welcome to buycoin</Paragraph>
+              <Heading>
+                Get Intouch with <Span>Buycoins</Span> Users
+              </Heading>
+              <SearchContainer>
+                <SearchWrapper>
+                  <SearchIcon />
+                  <Search
+                    className="search"
+                    placeholder="Search..."
+                    type="text"
+                    value={searchUsers}
+                    onChange={handleSearch}
+                  />
+                </SearchWrapper>
+              </SearchContainer>
+              <Flex>
+                <Paragraph>Fetch: </Paragraph>
+                <FilterFlex>
+                  <FilterContainer>
+                    <FilterBox onClick={handleFilterAll}>
+                      <Label>All</Label>
+                    </FilterBox>
+                    <FilterBox onClick={handleFilterBuyer}>
+                      <Label>Buyer</Label>
+                    </FilterBox>
+                    <FilterBox onClick={handleFilterSeller}>
+                      <Label>Seller</Label>
+                    </FilterBox>
+                    <FilterBox onClick={handleFilterBitcoin}>
+                      <Label>Bitcoin</Label>
+                    </FilterBox>
+                    <FilterBox onClick={handleFilterEthereum}>
+                      <Label>Ethereum</Label>
+                    </FilterBox>
+                    <FilterBox onClick={handleFilterSolana}>
+                      <Label>Solana</Label>
+                    </FilterBox>
+                  </FilterContainer>
+                </FilterFlex>
+              </Flex>
+            </ContentContainer>
+          </LeftWrapper>
+          <RightWrapper>
+            <ImageContainer>
+              <GirlImage src={girlImage} />
+            </ImageContainer>
+          </RightWrapper>
+        </HeaderContainer>
+        <TableContainer>
+          <TableSection>
+            <Table>
+              <TableRow>
+                <TableHead id="coin">Coin</TableHead>
+                <TableHead id="name">Customer Name</TableHead>
+                <TableHead id="role">Role</TableHead>
+                <TableHead id="date">Date</TableHead>
+                <TableHead id="id">Id</TableHead>
+              </TableRow>
+              {Object.entries(result)
+                .slice(
+                  0 + (pageNumber - 1) * listPerPage,
+                  listPerPage * pageNumber
+                )
+                .map(([date, details]) => {
+                  return (
+                    <TableBody key={date}>
+                      <TableRow>
+                        <TableData id="date-heading">{date}</TableData>
+                      </TableRow>
+                      {details.map((detail, index) => {
+                        return (
+                          <TableRow key={index}>
+                            <TableData id="coinImage">
+                              {detail.coin === "Bitcoin" ? (
+                                <BitcoinIcon />
+                              ) : detail.coin === "Ethereum" ? (
+                                <EthereumIcon />
+                              ) : (
+                                <SolanaIcon />
+                              )}
+
+                              {detail.coin}
+                            </TableData>
+                            <TableData>{detail.name}</TableData>
+                            <TableData>{detail.role}</TableData>
+                            <TableData>{detail.date}</TableData>
+                            <TableData>{detail.id}</TableData>
+                          </TableRow>
+                        );
+                      })}
+                    </TableBody>
+                  );
+                })}
+            </Table>
+          </TableSection>
+        </TableContainer>
+        <PaginationContainer>
+          <Paginate
+            totalPages={TotalNumberOfPages}
+            pageNumber={pageNumber}
+            setPageNumber={setPageNumber}
           />
-        </div>
-        <div className="flex">
-          <div className="filter-container">
-            <div className="filter-box" onClick={handleFilterAll}>
-              <p className="label">All</p>
-            </div>
-            <div className="filter-box" onClick={handleFilterBuyer}>
-              <p className="label">Buyer</p>
-            </div>
-            <div className="filter-box" onClick={handleFilterSeller}>
-              <p className="label">Seller</p>
-            </div>
-            <div className="filter-box" onClick={handleFilterBitcoin}>
-              <p className="label">Bitcoin</p>
-            </div>
-            <div className="filter-box" onClick={handleFilterEthereum}>
-              <p className="label">Ethereum</p>
-            </div>
-            <div className="filter-box" onClick={handleFilterBNB}>
-              <p className="label">BNB</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="table-container">
-        <div className="table-section">
-          <table>
-            <tr>
-              <th>Id</th>
-              <th>Name</th>
-              <th>Role</th>
-              <th>Currency</th>
-              <th>Date</th>
-            </tr>
-            {Object.entries(result)
-              .slice(
-                0 + (pageNumber - 1) * listPerPage,
-                listPerPage * pageNumber
-              )
-              .map(([date, details]) => {
-                return (
-                  <tfoot key={date}>
-                    <tr>
-                      <td className="date-heading">{date}</td>
-                    </tr>
-                    {details.map((detail, index) => {
-                      return (
-                        <tr key={index}>
-                          <td>{detail.id}</td>
-                          <td>{detail.name}</td>
-                          <td>{detail.role}</td>
-                          <td>{detail.currency}</td>
-                          <td>{detail.date}</td>
-                        </tr>
-                      );
-                    })}
-                  </tfoot>
-                );
-              })}
-          </table>
-        </div>
-      </div>
-      <Paginate
-        totalPages={TotalNumberOfPages}
-        pageNumber={pageNumber}
-        setPageNumber={setPageNumber}
-      />
-    </div>
+        </PaginationContainer>
+      </ContentWrapper>
+      <Footer />
+    </Container>
   );
 };

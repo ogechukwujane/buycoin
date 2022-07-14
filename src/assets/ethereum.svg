@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+<title>ethereum</title>
+<g transform="translate(-280 -944)" fill="none" fill-rule="evenodd">
+<g transform="translate(250 740)">
+<g transform="translate(30 204)">
+<circle cx="10" cy="10" r="10" fill="#7870B4"/>
+<g transform="translate(7 4)" fill="#fff" fill-rule="nonzero">
+<path d="m3 11.594v0.12029l-3-4.7143 3 1.9765v0.050196l0.036455-0.050196 2.9635-1.9765-2.9635 4.7143-0.036455-0.12029zm0-3.813v0.076127l-3-2.0639 3-5.7933v0.25921l0.064127-0.25921 2.9359 5.7933-2.9359 2.0638-0.064127-0.076127z"/>
+</g>
+</g>
+</g>
+</g>
+</svg>
