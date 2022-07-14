@@ -20,7 +20,7 @@ For this project development, React and json data were used which can be found i
 **Note: All folders and files used were created inside the src folder!**
 
 ### `User interface`
-Implementation of the user interface(UI) design can be seen in the home folder created inside the page folder. HTML tags and CSS stylings were used to build the app and make it responsive. A table of users' history with the following columns(Id, Customer Name, Role, Coin, Date) was created. The table was grouped with respect to the five different dates provided in the json data.
+Implementation of the user interface(UI) design can be seen in the home folder created inside the page folder. React and styled components were used to build the app and make it responsive. A table of users' history with the following columns(Id, Customer Name, Role, Coin, Date) was created. The table was grouped with respect to the five different dates provided in the json data.
 
 
 ### `Data manipulations`
