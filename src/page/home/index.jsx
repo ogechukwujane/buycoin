@@ -29,7 +29,7 @@ import {
 } from "./style";
 import { useState } from "react";
 import usersDb from "../../data/db.json";
-import girlImage from "../../assets/girl.webp";
+import girlImage from "../../assets/woman.svg";
 import { ReactComponent as SearchIcon } from "../../assets/search_icon.svg";
 import { ReactComponent as BitcoinIcon } from "../../assets/bitcoin.svg";
 import { ReactComponent as EthereumIcon } from "../../assets/ethereum.svg";
@@ -113,9 +113,11 @@ export const Home = () => {
         <HeaderContainer>
           <LeftWrapper>
             <ContentContainer>
-              <Paragraph>welcome to buycoin</Paragraph>
+              <Paragraph>
+                Making digital currency transaction seamless
+              </Paragraph>
               <Heading>
-                Get Intouch with <Span>Buycoins</Span> Users
+                Get Intouch with <Span>Buycoins</Span> Vendors
               </Heading>
               <SearchContainer>
                 <SearchWrapper>
