@@ -34,5 +34,5 @@ Pagination setup was created inside the component folder of the home folder.
 Maximum of three grouped data can be displayed in a page.
 
 ### `deployment`
-This project was deployed using Heroku and can be accessed via [https://helicarrier-buycoin.herokuapp.com/](https://helicarrier-buycoin.herokuapp.com/)
+This project was deployed using Heroku [link](https://helicarrier-buycoin.herokuapp.com/)
 
