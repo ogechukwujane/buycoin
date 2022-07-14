@@ -1,38 +1,34 @@
-# Getting Started with Buycoin App
+# Buycoin App
 
-This react project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The Buycoin app enables you to quickly search dummy users and the coins they have in their portfolio. You can search either using the coin name, the user’s name or user’s role or with any parameter of your choice except the unique id. This application is available on: https://helicarrier-buycoin.herokuapp.com/
 
-## Available Scripts
+## Getting  Started
 
-In the project directory, you can run:
+To get this application to work locally on your PC, follow the instructions below on the project directory, you can run:
 
-### `npm start`
+### `Install application dependencies`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Having cloned the application, navigate to the root directory of this application and run the `npm install` command to install the application dependencies.
 
 
-### `requirements`
-For this project development, React and json data were used which can be found in the data folder as db.json file.
-An array of twenty objects were created with five different dates.
+### `Running the application`
+To run the application, navigate to the root directory of this application and run the `npm run start`  command. The application will be started on http://localhost:3000 which can be accessed via the browser.
 
+
+### `Project Development Process`
+For this project development, React and json data were used which can be found in the data folder as db.json file. An array object was created with five different dates.
 **Note: All folders and files used were created inside the src folder!**
 
-### `user interface`
-Implementation of the user interface(UI) design can be seen in the home folder created inside the page folder.
-HTML tags and CSS stylings were used to build the app and make it responsive.
-A table of users history with the following columns(Id, Name, Role, Currency, Date) was created.
-The table was grouped with respect to the five different dates provided in the json data.
+### `User interface`
+Implementation of the user interface(UI) design can be seen in the home folder created inside the page folder. HTML tags and CSS stylings were used to build the app and make it responsive. A table of users' history with the following columns(Id, Customer Name, Role, Coin, Date) was created. The table was grouped with respect to the five different dates provided in the json data.
 
-### `data manipulations`
-Array and Object methods were used to implement the search and filter buttons.
-One can search for data with respect to any column except for the unique Id column. 
-Some filter buttons were provided to filter data with respect to the button status.
 
-### `pagination`
-Pagination setup was created inside the component folder of the home folder.
-Maximum of three grouped data can be displayed in a page.
+### `Data manipulations`
+Array and Object methods were used to implement the search and filter buttons. One can search for data with respect to any column except for the Unique Id column. Some filter buttons were provided to filter data with respect to the button status.
 
-### `deployment`
-This project was deployed using Heroku [https://helicarrier-buycoin.herokuapp.com/](https://helicarrier-buycoin.herokuapp.com/)
+### `Pagination`
+Pagination setup was created inside the component  folder. A maximum of three grouped data can be displayed on a page.
+
+###`Deployment`
+This project was deployed on Heroku and can be accessed using:[https://helicarrier-buycoin.herokuapp.com/](https://helicarrier-buycoin.herokuapp.com/)
 
